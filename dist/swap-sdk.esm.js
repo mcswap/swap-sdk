@@ -33,14 +33,8 @@ var Rounding;
   Rounding[Rounding["ROUND_DOWN"] = 0] = "ROUND_DOWN";
   Rounding[Rounding["ROUND_HALF_UP"] = 1] = "ROUND_HALF_UP";
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
-})(Rounding || (Rounding = {})); // TODO(tron): nile address is 0x41DA32Ec09Fb54aB5f5742F1eB730003caaC0BbF
-// export const FACTORY_ADDRESS = '0x040A3d84309784628290b9f3437874868beE30Af'
-// Shasta contract
-// export const FACTORY_ADDRESS = '0xb9fe040dd98a9718805c976f8a899ef17b0f43ed'
-// Mainnet contract
+})(Rounding || (Rounding = {}));
 
-
-var FACTORY_ADDRESS = '0x1d0721d247497593a400d01b02ada3be1129730d';
 var INIT_CODE_HASH = '0x278d8201610c32bb650c43e9c27bb9124680c6c6b82d65d58a4117c055f01573';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
@@ -864,7 +858,7 @@ var Pair = /*#__PURE__*/function () {
   Pair.getAddressWarning = function getAddressWarning(tokenA, tokenB) {
     if (this.warningWasDisplayedOnce) return;
     this.warningWasDisplayedOnce = true;
-    var message = ["Unknown pair contract address for pair " + tokenA.symbol + "/" + tokenB.symbol + " ", "(" + tokenA.address + ", " + tokenB.address + "). ", 'Open an issue at https://gitlab.com/mcswap/swap-sdk/issues ', 'with this error message to get the pair added. ', 'You can also add the pair to PAIR_ADDRESSES in ', 'https://gitlab.com/mcswap/swap-sdk/blob/master/src/constants.ts ', 'and send a pull request (if you know how!).'].join('');
+    var message = ["Unknown pair contract address for pair " + tokenA.symbol + "/" + tokenB.symbol + " ", "(" + tokenA.address + ", " + tokenB.address + "). ", 'Open an issue at https://github.com/mcswap/swap-sdk/issues ', 'with this error message to get the pair added. ', 'You can also add the pair to PAIR_ADDRESSES in ', 'https://github.com/mcswap/swap-sdk/blob/master/src/constants.ts ', 'and send a pull request (if you know how!).'].join('');
 
     if (typeof window === 'undefined') {
       console.warn(message);
@@ -1723,5 +1717,5 @@ var Fetcher = /*#__PURE__*/function () {
   return Fetcher;
 }();
 
-export { ChainId, Currency, CurrencyAmount, ETHER, FACTORY_ADDRESS, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
+export { ChainId, Currency, CurrencyAmount, ETHER, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
 //# sourceMappingURL=swap-sdk.esm.js.map

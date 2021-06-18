@@ -20,13 +20,6 @@ export enum Rounding {
   ROUND_UP
 }
 
-// TODO(tron): nile address is 0x41DA32Ec09Fb54aB5f5742F1eB730003caaC0BbF
-// export const FACTORY_ADDRESS = '0x040A3d84309784628290b9f3437874868beE30Af'
-// Shasta contract
-// export const FACTORY_ADDRESS = '0xb9fe040dd98a9718805c976f8a899ef17b0f43ed'
-// Mainnet contract
-export const FACTORY_ADDRESS = '0x1d0721d247497593a400d01b02ada3be1129730d'
-
 export const INIT_CODE_HASH = '0x278d8201610c32bb650c43e9c27bb9124680c6c6b82d65d58a4117c055f01573'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
